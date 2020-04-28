@@ -29,6 +29,7 @@ function Home() {
               price={post.fields.price}
               date={post.fields.pickUpDate}
               address={post.fields.pickUpAddress}
+              slug={`posts/${post.fields.slug}`}
             />
           );
         })}

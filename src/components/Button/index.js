@@ -1,7 +1,13 @@
-import React from "./node_modules/react";
+import React from "react";
 
-function Button() {
-  return <div>hej</div>;
+function Button(props) {
+  return (
+    <div>
+      <a href={props.slug}>
+        <button>Read more</button>
+      </a>
+    </div>
+  );
 }
 
 export default Button;

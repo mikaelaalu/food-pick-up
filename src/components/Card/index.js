@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./../Button";
 
 function Card(props) {
   return (
@@ -9,6 +10,7 @@ function Card(props) {
         <p>{props.price} kr</p>
         <p>{props.date}</p>
         <p>{props.address}</p>
+        <Button slug={props.slug} />
       </div>
     </div>
   );
