@@ -1,6 +1,16 @@
 import React from "react";
 import Card from "./../components/Card";
 import client from "./../contentful";
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  jusify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
 
 function Home() {
   const [posts, setPosts] = React.useState(null);
@@ -16,10 +26,14 @@ function Home() {
   }, []);
 
   return (
-    <div>
+    <Wrapper>
       {posts &&
         posts.map((post, i) => {
-          console.log(post);
+          const fields = post.fields.pickUpDate.split("T");
+          const date = fields[0];
+
+          const orderDate = date.split("-");
+          const pickUpdate = `${fields[1]} ${orderDate[2]}/${orderDate[1]}/${orderDate[0]}`;
 
           return (
             <Card
@@ -27,13 +41,13 @@ function Home() {
               title={post.fields.dish}
               image={post.fields.image.fields.file.url}
               price={post.fields.price}
-              date={post.fields.pickUpDate}
+              date={pickUpdate}
               address={post.fields.pickUpAddress}
               slug={`posts/${post.fields.slug}`}
             />
           );
         })}
-    </div>
+    </Wrapper>
   );
 }
 
