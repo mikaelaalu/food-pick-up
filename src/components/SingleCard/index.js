@@ -57,7 +57,7 @@ function SingleCard(props) {
         </div>
         <p>{props.description}</p>
 
-        <div class="ingredients">
+        <div className="ingredients">
           <p>Ingredients:</p>
           <ul>
             {props.ingredients.map((ingredient, i) => {
