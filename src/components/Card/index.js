@@ -4,10 +4,13 @@ import styled from "styled-components";
 
 const StyledDiv = styled.div`
   width: 350px;
-  margin: 40px;
+  margin: 10px;
   box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.41);
   margin-bottom: 50px;
 
+  :nth-child(1) {
+    margin-top: 100px;
+  }
   h3 {
     color: red;
     text-align: center;

@@ -1,22 +1,20 @@
 import React from "react";
-
 import styled from "styled-components";
 
 const StyledSingleCard = styled.div`
   width: 350px;
-  margin: 40px;
   box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.41);
+  margin-top: 100px;
 
   h3 {
     color: red;
     text-align: center;
   }
-  p {
+  .portions {
     text-align: right;
     margin-top: -20px;
     margin-bottom: 20px;
   }
-
   img {
     width: 350px;
     height: 300px;
@@ -25,7 +23,7 @@ const StyledSingleCard = styled.div`
 
   div {
     padding: 10px;
-    div {
+    .info-box {
       display: flex;
       justify-content: space-evenly;
 
@@ -33,10 +31,14 @@ const StyledSingleCard = styled.div`
         color: #6e6e6e;
       }
     }
+  }
 
-    ul {
-      list-style-type: none;
-    }
+  .ingredients {
+    border: 1px solid #6e6e6e;
+    width: 50%;
+  }
+  ul {
+    list-style-type: none;
   }
 `;
 
@@ -46,19 +48,23 @@ function SingleCard(props) {
       <img className="image" alt="food" src={props.image}></img>
       <div>
         <h3>{props.title}</h3>
-        <p>{props.portions} Portions</p>
+        <p className="portions">{props.portions} Portions</p>
 
-        <div>
+        <div className="info-box">
           <p>{props.price} Kr</p>
           <p>{props.date}</p>
           <p>{props.address}</p>
         </div>
+        <p>{props.description}</p>
 
-        <ul>
-          {props.ingredients.map((ingredient, i) => {
-            return <li key={i}>{ingredient}</li>;
-          })}
-        </ul>
+        <div class="ingredients">
+          <p>Ingredients:</p>
+          <ul>
+            {props.ingredients.map((ingredient, i) => {
+              return <li key={i}>{ingredient}</li>;
+            })}
+          </ul>
+        </div>
       </div>
     </StyledSingleCard>
   );

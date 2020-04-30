@@ -44,6 +44,7 @@ function SinglePost(props) {
         price={post.fields.price}
         date={pickUpdate}
         address={post.fields.pickUpAddress}
+        description={post.fields.description}
       />
     </Wrapper>
   );
