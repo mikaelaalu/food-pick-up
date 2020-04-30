@@ -25,6 +25,10 @@ function Home() {
       });
   }, []);
 
+  if (!posts) {
+    return <div>Loading</div>;
+  }
+
   return (
     <Wrapper>
       {posts &&
