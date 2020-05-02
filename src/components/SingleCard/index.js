@@ -38,7 +38,7 @@ const StyledSingleCard = styled.div`
     width: 50%;
   }
   ul {
-    list-style-type: none;
+    padding-left: 15px;
   }
 `;
 

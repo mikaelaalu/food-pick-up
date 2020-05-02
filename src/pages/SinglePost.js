@@ -2,6 +2,7 @@ import React from "react";
 import SingleCard from "./../components/SingleCard";
 import client from "./../contentful";
 import styled from "styled-components";
+import Loading from "./../components/Loading";
 
 const Wrapper = styled.div`
   width: 100vw;
@@ -25,7 +26,7 @@ function SinglePost(props) {
   }, [props.slug]);
 
   if (!post) {
-    return <div>Loading</div>;
+    return <Loading></Loading>;
   }
 
   const fields = post.fields.pickUpDate.split("T");

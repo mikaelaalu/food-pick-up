@@ -2,6 +2,7 @@ import React from "react";
 import Card from "./../components/Card";
 import client from "./../contentful";
 import styled from "styled-components";
+import Loading from "./../components/Loading";
 
 const Wrapper = styled.div`
   width: 100vw;
@@ -26,7 +27,7 @@ function Home() {
   }, []);
 
   if (!posts) {
-    return <div>Loading</div>;
+    return <Loading></Loading>;
   }
 
   return (
