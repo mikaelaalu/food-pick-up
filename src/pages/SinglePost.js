@@ -33,7 +33,7 @@ function SinglePost(props) {
   const date = fields[0];
 
   const orderDate = date.split("-");
-  const pickUpdate = `${fields[1]} ${orderDate[2]}/${orderDate[1]}/${orderDate[0]}`;
+  const pickUpdate = `${fields[1]} ${orderDate[2]}/${orderDate[1]}`;
 
   return (
     <Wrapper>

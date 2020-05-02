@@ -12,9 +12,9 @@ const StyledDiv = styled.div`
     margin-top: 100px;
   }
   h3 {
-    color: red;
+    font-size: 24px;
     text-align: center;
-    padding: 10px;
+    padding: 8px;
   }
 
   img {
@@ -24,7 +24,7 @@ const StyledDiv = styled.div`
   }
 
   div {
-    padding: 5px;
+    padding: 10px;
 
     div {
       display: flex;
