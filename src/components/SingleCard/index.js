@@ -6,6 +6,7 @@ const StyledSingleCard = styled.div`
   width: 350px;
   box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.41);
   margin-top: 100px;
+  margin-bottom: 50px;
 
   h3 {
     text-align: center;
