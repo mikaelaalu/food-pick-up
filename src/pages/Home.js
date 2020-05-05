@@ -32,26 +32,25 @@ function Home() {
 
   return (
     <Wrapper>
-      {posts &&
-        posts.map((post, i) => {
-          const fields = post.fields.pickUpDate.split("T");
-          const date = fields[0];
+      {posts.map((post, i) => {
+        const fields = post.fields.pickUpDate.split("T");
+        const date = fields[0];
 
-          const orderDate = date.split("-");
-          const pickUpdate = `${fields[1]} ${orderDate[2]}/${orderDate[1]}`;
+        const orderDate = date.split("-");
+        const pickUpdate = `${fields[1]} ${orderDate[2]}/${orderDate[1]}`;
 
-          return (
-            <Card
-              key={i}
-              title={post.fields.dish}
-              image={post.fields.image.fields.file.url}
-              price={post.fields.price}
-              date={pickUpdate}
-              address={post.fields.pickUpAddress}
-              slug={`posts/${post.fields.slug}`}
-            />
-          );
-        })}
+        return (
+          <Card
+            key={i}
+            title={post.fields.dish}
+            image={post.fields.image.fields.file.url}
+            price={post.fields.price}
+            date={pickUpdate}
+            address={post.fields.pickUpAddress}
+            slug={`posts/${post.fields.slug}`}
+          />
+        );
+      })}
     </Wrapper>
   );
 }
