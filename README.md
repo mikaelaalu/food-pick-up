@@ -6,3 +6,8 @@ Quarantine food pick up.
 * React
 * Contentful (headless CMS)
 
+
+Visit the website here 
+https://food-pick-up.netlify.app/
+
+## Author Mikaela Lundsgård
