@@ -10,4 +10,5 @@ Quarantine food pick up.
 Visit the website here 
 https://food-pick-up.netlify.app/
 
-## Author Mikaela Lundsgård
+## Author 
+Mikaela Lundsgård
